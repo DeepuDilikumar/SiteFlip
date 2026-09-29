@@ -1,0 +1,512 @@
+/* Modern Service — trust-first, mobile-first, built for tap-to-call. */
+.ms {
+  --ms-bg: #ffffff;
+  --ms-tint: #f4f6f8;
+  --ms-ink: #0f1b2a;
+  --ms-ink-2: #4a5868;
+  --ms-line: #e2e7ed;
+  --ms-accent: #0b5cad;
+  --ms-accent-hover: #094b8e;
+  --ms-accent-soft: #e8f1fb;
+  --ms-font: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  background: var(--ms-bg);
+  color: var(--ms-ink);
+  font-family: var(--ms-font);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-bottom: 80px; /* room for the mobile call bar */
+}
+
+.ms-wrap {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ms-muted {
+  color: var(--ms-ink-2);
+}
+
+.ms-accent {
+  color: var(--ms-accent);
+}
+
+.ms-h1 {
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.ms-h2 {
+  font-size: clamp(26px, 3.6vw, 36px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.ms-h2-inverse {
+  color: #fff;
+}
+
+.ms-h4 {
+  margin-bottom: 4px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.ms-lede {
+  max-width: 34em;
+  margin-top: 16px;
+  color: var(--ms-ink-2);
+  font-size: 18px;
+}
+
+/* Buttons */
+.ms-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 10px;
+  background: var(--ms-accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.ms-button:hover {
+  background: var(--ms-accent-hover);
+}
+
+.ms-button:active {
+  transform: scale(0.98);
+}
+
+.ms-button-sm {
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.ms-button-lg {
+  min-height: 52px;
+  padding: 0 24px;
+  font-size: 16px;
+}
+
+.ms-button-quiet {
+  background: transparent;
+  color: var(--ms-ink);
+  box-shadow: inset 0 0 0 1px var(--ms-line);
+}
+
+.ms-button-quiet:hover {
+  background: var(--ms-tint);
+}
+
+.ms-button-inverse {
+  background: #fff;
+  color: var(--ms-ink);
+}
+
+.ms-button-inverse:hover {
+  background: var(--ms-accent-soft);
+}
+
+.ms-show-sm {
+  display: inline;
+}
+
+.ms-hide-sm {
+  display: none;
+}
+
+/* Header */
+.ms-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--ms-line);
+}
+
+.ms-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+}
+
+.ms-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.ms-brand > span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ms-mark {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--ms-ink);
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+/* Hero */
+.ms-hero {
+  padding: 40px 0 56px;
+  background: linear-gradient(180deg, var(--ms-tint), var(--ms-bg));
+}
+
+.ms-hero-grid {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+.ms-trustline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.ms-trust-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ms-ink-2);
+}
+
+.ms-trust-rating strong {
+  color: var(--ms-ink);
+}
+
+.ms-stars {
+  color: #e5a00d;
+}
+
+.ms-trust-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--ms-accent-soft);
+  color: var(--ms-accent);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.ms-hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.ms-card {
+  padding: 24px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow:
+    0 0 0 1px var(--ms-line),
+    0 12px 32px rgba(15, 27, 42, 0.06);
+}
+
+.ms-status-card {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.ms-card-label {
+  margin-bottom: 8px;
+  color: var(--ms-accent);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.ms-status-title {
+  margin-bottom: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.ms-checks {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--ms-line);
+}
+
+.ms-checks li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.ms-check {
+  flex: none;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--ms-accent-soft);
+  color: var(--ms-accent);
+}
+
+.ms-hours {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ms-ink-2);
+  font-size: 14px;
+}
+
+/* Highlights */
+.ms-highlights {
+  padding: 32px 0;
+  border-top: 1px solid var(--ms-line);
+  border-bottom: 1px solid var(--ms-line);
+}
+
+.ms-highlight-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.ms-highlight {
+  display: flex;
+  gap: 16px;
+}
+
+.ms-highlight svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+/* Sections */
+.ms-section {
+  padding: 64px 0;
+}
+
+.ms-section-tint {
+  background: var(--ms-tint);
+}
+
+.ms-section-head {
+  display: grid;
+  gap: 8px;
+  max-width: 40em;
+  margin-bottom: 32px;
+}
+
+.ms-service-grid,
+.ms-review-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.ms-service {
+  height: 100%;
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+
+.ms-service:hover {
+  box-shadow:
+    0 0 0 1px #c9d3de,
+    0 16px 40px rgba(15, 27, 42, 0.08);
+}
+
+.ms-review blockquote {
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+.ms-review-author {
+  color: var(--ms-ink-2);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ms-about {
+  display: grid;
+  gap: 24px;
+}
+
+.ms-about-body {
+  display: grid;
+  gap: 16px;
+  max-width: 40em;
+  color: var(--ms-ink-2);
+  font-size: 17px;
+}
+
+/* CTA */
+.ms-cta {
+  padding: 64px 0;
+  background: var(--ms-ink);
+  color: #fff;
+}
+
+.ms-cta-grid {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+.ms-cta-body {
+  max-width: 32em;
+  margin: 16px 0 32px;
+  color: #b9c4d0;
+  font-size: 17px;
+}
+
+.ms-contact {
+  display: grid;
+  gap: 8px;
+}
+
+.ms-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 56px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  transition: background-color 180ms ease;
+}
+
+a.ms-contact-row:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.ms-contact-row svg {
+  flex: none;
+  color: #8fb8e6;
+}
+
+/* Footer */
+.ms-footer {
+  padding: 24px 0;
+  border-top: 1px solid var(--ms-line);
+  color: var(--ms-ink-2);
+  font-size: 14px;
+}
+
+.ms-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
+/* Mobile call bar */
+.ms-callbar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--ms-line);
+}
+
+.ms-callbar-button {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .ms-hero-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .ms-service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .ms {
+    padding-bottom: 0;
+  }
+
+  .ms-show-sm,
+  .ms-callbar {
+    display: none;
+  }
+
+  .ms-hide-sm {
+    display: inline;
+  }
+
+  .ms-hero {
+    padding: 80px 0 96px;
+  }
+
+  .ms-hero-grid {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 64px;
+  }
+
+  .ms-highlight-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .ms-section {
+    padding: 96px 0;
+  }
+
+  .ms-service-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .ms-review-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .ms-about {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 64px;
+  }
+
+  .ms-cta {
+    padding: 96px 0;
+  }
+
+  .ms-cta-grid {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 64px;
+  }
+}
